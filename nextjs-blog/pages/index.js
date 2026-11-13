@@ -50,7 +50,7 @@ export default function Home({ allPostsData }) {
 
                 This website is utilizing a custom wordpress API to retrive and sort the blog data from a pantheon hosted wordpress site. {' '}
 
-                <a href="posts/first-post">Next Page </a>
+        
               </p>
             </section>
           </section>
