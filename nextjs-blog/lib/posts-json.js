@@ -104,7 +104,6 @@ export async function getAllPostIds() {
             params: {
                 // Convert the numeric id into a string to match the URL parameter format.
                 id: item.ID.toString(),
-                name: item.post_title
             }
         };
     });

@@ -37,7 +37,7 @@ export default function Post({ postData }) {
 // Export a function that creates the list of valid post route paths for static generation.
 export async function getStaticPaths() {
   // Read all of the JSON post ids and build the dynamic route path list.
-  const paths = getAllPostIds();
+  const paths = await getAllPostIds();
   // Keep the previous markdown-based note in comments for reference while the project uses JSON data.
   // const paths = getAllPostIds(); gets md posts
   // Return the paths list so Next.js knows which post pages to render.
@@ -50,7 +50,7 @@ export async function getStaticPaths() {
 // Export the page getter that loads the data for a selected post from the JSON file.
 export async function getStaticProps({ params }) {
   // Find the matching post object for the route parameter id.
-  const postData = getPostData(params.id);
+  const postData = await getPostData(params.id);
   // Log the selected post in development for debugging.
   console.log(postData);
   // Return the post data inside props so the page can render it.
